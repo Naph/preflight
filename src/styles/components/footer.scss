@@ -1,0 +1,10 @@
+.footer {
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-half;
+  @include font();
+  color: $brand-gray;
+
+  a {
+    color: $brand-gray;
+  }
+}

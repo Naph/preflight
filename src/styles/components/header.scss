@@ -1,0 +1,7 @@
+
+.header {
+  padding-top: $gutter-half;
+  padding-bottom: $gutter-width;
+  @include font($font-size-title, bold);
+  color: $brand-primary;
+}

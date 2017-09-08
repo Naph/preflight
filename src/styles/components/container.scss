@@ -1,0 +1,18 @@
+.body {
+  background-color: $body-bg;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: $container-width;
+  max-width: $container-width;
+  background-color: $brand-white;
+}
+
+.container-padding {
+  padding-left: $gutter-half;
+  padding-right: $gutter-half;
+}

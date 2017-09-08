@@ -1,0 +1,30 @@
+$container-width: 600px;
+$gutter-width: 24px;
+
+$brand-primary: #011F3B;
+$brand-secondary: #133052;
+$brand-gray: #B9B9B9;
+$brand-gray-lightest: #F0F0F0;
+$brand-black: #212D3D;
+$brand-white: white;
+
+$primary-font-family: Arial, sans-serif;
+$secondary-font-family: Georgia, serif;
+
+$font-size-base: 14px;
+$font-weight-base: normal;
+$font-family-base: $primary-font-family;
+$line-height-base: 1.4;
+
+@function line-height-computed($font-size, $line-height: $line-height-base) {
+  @return floor($font-size * $line-height);
+}
+
+$body-bg: $brand-gray-lightest;
+$container-color: $brand-white;
+
+$gutter-half: $gutter-width / 2;
+
+$font-size-title: 24px;
+$font-size-subtitle: 20px;
+$font-size-paragraph: $font-size-base;

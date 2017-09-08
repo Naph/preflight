@@ -1,0 +1,24 @@
+.title {
+  @include font($font-size-title);
+  color: $brand-secondary;
+}
+
+.subtitle {
+  @include font($font-size-subtitle);
+  color: $brand-secondary;
+}
+
+.body-text {
+  @include font($font-size-paragraph);
+  color: $brand-black;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.hr {
+  height: 1px;
+  border-bottom: 1px solid #cccccc;
+}
