@@ -1,18 +1,17 @@
 const juice = require('juice');
-const fs = require('fs');
-const path = require('path');
 
 class PreflightPlugin {
   apply(compiler) {
-    compiler.plugin('compilation', (compilation) => compilation.plugin('html-webpack-plugin-after-emit', (data, callback) => {
-      fs.writeFile(path.resolve('./dist/index.html'), juice(data.html.source()), (err) => {
-        if (err) {
-          console.error(err);
-        }
-      });
+    compiler.plugin('emit', (compilation, done) => {
+      let fileContent = juice(compilation.assets['source.html'].source());
 
-      callback(null, data);
-    }));
+      compilation.assets['index.html'] = {
+        source: () => fileContent,
+        size: () => Buffer.byteLength(fileContent, 'utf8')
+      };
+
+      done();
+    });
   }
 }
 
