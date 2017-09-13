@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
 const PreflightPlugin = require('./preflight.plugin');
@@ -45,9 +44,6 @@ module.exports = {
       filename: 'source.html',
       requires: ['main']
     }),
-    new PreflightPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      debug: true
-    })
+    new PreflightPlugin()
   ]
 };

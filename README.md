@@ -1,7 +1,7 @@
 # Preflight
 Painless CSS inliner for email templates
 
-## Installation
+## Usage
 ```bash
 # clone repo
 git clone git@github.com:Naph/preflight.git
@@ -10,7 +10,7 @@ git clone git@github.com:Naph/preflight.git
 npm i
 
 # run webpack-dev-server
-npx start
+npm start
 ```
 Requires node 8.x
 
