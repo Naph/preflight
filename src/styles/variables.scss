@@ -1,30 +1,38 @@
 $container-width: 600px;
 $gutter-width: 24px;
 
-$brand-primary: #011F3B;
-$brand-secondary: #133052;
-$brand-gray: #B9B9B9;
-$brand-gray-lightest: #F0F0F0;
-$brand-black: #212D3D;
-$brand-white: white;
+$themes: (
+  _default: (
+    primary: #011F3B,
+    secondary: #133052,
+    gray: #B9B9B9,
+    gray-lightest: #F0F0F0,
+    black: #212D3D,
+    white: white,
+  ),
+);
 
-$primary-font-family: Arial, sans-serif;
-$secondary-font-family: Georgia, serif;
+@function color-get($color-name: primary, $theme-name: _default) {
+  @return map-get(map-get($themes, $theme-name), $color-name);
+}
+
+$font-family: "Proximo Nova", Helvetica Neue, Helvetica, Arial, sans-serif;
 
 $font-size-base: 14px;
 $font-weight-base: normal;
-$font-family-base: $primary-font-family;
-$line-height-base: 1.4;
+$font-family-base: $font-family;
+$line-height-base: 120%;
 
-@function line-height-computed($font-size, $line-height: $line-height-base) {
-  @return floor($font-size * $line-height);
-}
-
-$body-bg: $brand-gray-lightest;
-$container-color: $brand-white;
+$body-bg: color-get(gray-lightest);
+$container-color: color-get(white);
 
 $gutter-half: $gutter-width / 2;
 
-$font-size-title: 24px;
-$font-size-subtitle: 20px;
-$font-size-paragraph: $font-size-base;
+$font-size-title: 18px;
+$font-size-subtitle: 14px;
+$font-size-paragraph: 12px;
+
+$breakpoints: (
+  threshold: $container-width,
+  mobile: 415px,
+);

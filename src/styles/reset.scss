@@ -1,0 +1,23 @@
+div {
+  line-height: 100%;
+  mso-line-height-rule: exactly;
+}
+
+a {
+  border: 0;
+
+  * {
+    border: 0;
+  }
+}
+
+/**
+ * Scatter-gun align="left"
+ * Outlook 2003->2010 will default to align-center
+ */
+#template table {
+  table:not([align]),
+  span, div {
+    text-align: left;
+  }
+}

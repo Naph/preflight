@@ -4,15 +4,30 @@
 
 .wrapper {
   width: 100%;
+
 }
 
 .container {
   width: $container-width;
   max-width: $container-width;
-  background-color: $brand-white;
+  background-color: color-get(white);
 }
 
 .container-padding {
-  padding-left: $gutter-half;
-  padding-right: $gutter-half;
+  padding: $gutter-half;
+}
+
+@include breakpoint(threshold) {
+  .force-row,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@include breakpoint(mobile) {
+  .container-padding {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
 }

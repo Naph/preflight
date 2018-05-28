@@ -1,16 +1,24 @@
 .title {
-  @include font($font-size-title);
-  color: $brand-secondary;
+  @include font($font-size-title, bold);
 }
 
 .subtitle {
-  @include font($font-size-subtitle);
-  color: $brand-secondary;
+  @include font($font-size-subtitle, bold);
 }
 
-.body-text {
+.paragraph {
   @include font($font-size-paragraph);
-  color: $brand-black;
+}
+
+.fine-print {
+  @include font(11px);
+}
+
+sup {
+  line-height: 0;
+  font-size: 85%;
+  vertical-align: top;
+  mso-text-raise:60%;
 }
 
 hr {
@@ -18,7 +26,38 @@ hr {
   border-bottom: 1px solid #cccccc;
 }
 
+a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+/**
+ * Drop-in <br> class
+ * Linebreak will match height of gutter-half
+ */
+.gutter-break {
+  line-height: 100 / $font-size-base * $gutter-half * 1%;
+}
+
+/**
+ * Replacement for <hr>
+ * Complete client coverage, line-breaks tags are used to
+ * space the horizontal line.
+ *
+ * Markdown example:
+ * <td class="hr">
+ *   <br><br><div>&nbsp;</div><br>
+ * </td>
+ */
 .hr {
-  height: 1px;
-  border-bottom: 1px solid #cccccc;
+  @extend .gutter-break;
+
+  div {
+    border-bottom: 1px solid #cccccc;
+  }
 }

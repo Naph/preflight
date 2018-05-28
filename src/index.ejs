@@ -15,8 +15,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- enable media queries for windows phone 8 -->
   <meta name="format-detection" content="date=no"> <!-- disable auto date linking in iOS 7-9 -->
   <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS 7-9 -->
-
-  <link rel="stylesheet" href="main?_inline">
   <style type="text/css" data-embed>
     body {
       margin: 0;
@@ -64,26 +62,6 @@
       border-bottom: none !important;
     }
 
-    @media screen and (max-width: 599px) {
-      .force-row,
-      .container {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      .container-padding {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-      }
-    }
-
-    .ios-footer a {
-      color: #aaaaaa !important;
-      text-decoration: underline;
-    }
-
     a[href^="x-apple-data-detectors:"],
     a[x-apple-data-detectors] {
       color: inherit !important;
@@ -96,130 +74,12 @@
   </style>
 </head>
 <body class="body">
-<!--SCRIPT-->
 <table class="wrapper" cellpadding="0" cellspacing="0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
   <tr>
-    <td align="center" valign="top">
-
-      <br>
-
-      <table class="container" cellpadding="0" cellspacing="0">
-        <tr>
-          <td class="container-padding header" align="left">
-            Antwort v1.0
-          </td>
-        </tr>
-        <tr>
-          <td class="container-padding content" align="left">
-            <div class="title">Two Columns (simple)</div>
-            <br>
-
-            <div class="body-text">
-              This is an example of transforming two columns on desktop into rows on mobile.
-              <br><br>
-            </div>
-
-            <div class="hr">&nbsp;</div>
-            <br>
-
-            <!-- example: two columns (simple) -->
-
-            <!--[if mso]>
-            <table>
-              <tr><td width="50%" valign="top"><![endif]-->
-
-            <table width="264" border="0" cellpadding="0" cellspacing="0" align="left" class="force-row">
-              <tr>
-                <td class="body-text" valign="top">
-                  <strong>Herman Melville</strong>
-                  <br><br>
-                  It's worse than being in the whirled woods, the last day of the year! Who'd go climbing after chestnuts now? But there they go, all cursing, and here I don't.
-                  <br><br>
-                </td>
-              </tr>
-            </table>
-
-            <!--[if mso]></td><td width="50%" valign="top"><![endif]-->
-
-            <table width="264" border="0" cellpadding="0" cellspacing="0" align="right" class="force-row">
-              <tr>
-                <td class="body-text" valign="top">
-                  <strong>I am Ishmael</strong>
-                  <br><br>
-                  White squalls? white whale, shirr! shirr! Here have I heard all their chat just now, and the white whale—shirr! shirr!—but spoken of once! and&hellip;
-                  <br><br>
-                </td>
-              </tr>
-            </table>
-
-            <!--[if mso]></td></tr></table><![endif]-->
-
-
-            <!--/ end example -->
-
-            <div class="hr" style="clear: both;">&nbsp;</div>
-            <br>
-
-            <div class="subtitle">
-              Code Walkthrough
-            </div>
-
-            <div class="body-text">
-              <ol>
-                <li>
-                  Create a columns container <code>&lt;table&gt;</code> just for Outlook using <code>if mso</code> conditionals.<br>
-                  The container's <code>&lt;td&gt;</code>'s have a width of <code>50%.</code>
-                  <br><br>
-                </li>
-                <li>
-                  Wrap our columns in a <code>&lt;table&gt;</code> with a <strong>fixed width</strong> of <code>264px</code>.
-                  <ul>
-                    <li>
-                      264px = (600 - 24*3) / 2 - container width minus margins divided by number of columns
-                    </li>
-                    <li>
-                      First table is aligned left.
-                    </li>
-                    <li>
-                      Second table is aligned right.
-                    </li>
-                  </ul>
-                  <br>
-                </li>
-                <li>
-                  Apply <code>clear: both;</code> to first element after our wrapper table.
-                </li>
-              </ol>
-
-              <br>
-              <em><small>Last updated: 10 October 2014</small></em>
-            </div>
-
-            <br>
-          </td>
-        </tr>
-        <tr>
-          <td class="container-padding footer" align="left">
-            Sample Footer text: &copy; 2015 Acme, Inc.
-            <br><br>
-
-            You are receiving this email because you opted in on our website. Update your <a href="#">email preferences</a> or <a href="#">unsubscribe</a>.
-            <br><br>
-
-            <strong>Acme, Inc.</strong><br>
-            <span class="ios-footer">
-              123 Main St.<br>
-              Springfield, MA 12345<br>
-            </span>
-            <a href="http://www.acme-inc.com">www.acme-inc.com</a>
-          </td>
-        </tr>
-      </table>
-
-
+    <td id="template" align="center" valign="top">
+      <%= htmlWebpackPlugin.options.body %>
     </td>
   </tr>
 </table>
-
 </body>
 </html>
