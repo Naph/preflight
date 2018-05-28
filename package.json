@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "npx gulp --require babel-register --gulpfile tasks",
+    "start": "npx gulp --require babel-register --gulpfile tasks",
     "build": "NODE_ENV=production npx gulp build --require babel-register --gulpfile tasks"
   },
   "dependencies": {
