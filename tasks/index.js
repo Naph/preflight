@@ -1,6 +1,6 @@
 import gulp from 'gulp'
 
-import { serve } from './server'
+import { serve } from './browsersync'
 import { scripts } from './webpack';
 
 export const build = gulp.series(scripts);
