@@ -20,9 +20,6 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        options: {
-          env: 'latest',
-        },
       },
       {
         test: /\.(gif|png|jpe?g)$/,

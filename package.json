@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "start": "npx gulp --require babel-register --gulpfile tasks",
-    "build": "NODE_ENV=production npx gulp build --require babel-register --gulpfile tasks"
+    "start": "npx gulp --require @babel/register --gulpfile tasks",
+    "build": "NODE_ENV=production npx gulp build --require @babel/register --gulpfile tasks"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.24.4",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.7",

@@ -6,18 +6,18 @@ Download the zipped source files into a project directory.
 
 Install dependencies
 ```bash
-npm i
+yarn
 ```
 Edit templates in `src/templates/` and start the watcher
 ```bash
-npm start
+yarn start
 ```
 This starts Browsersync and compiles templates using Webpack. Compiled files will output into `dist/` with both the source and `*_compiled.html` version.
 
 Navigate using your browser to view the example template
 ```
 http://localhost:3000/template.html
-``` 
+```
 Making changes in `src/` will automatically compile and refresh the page.
 ```
 src

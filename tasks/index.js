@@ -6,4 +6,4 @@ import { scripts } from './webpack';
 export const build = gulp.series(scripts);
 export const dev = gulp.series(scripts, serve);
 
-export default dev
+export default dev;
